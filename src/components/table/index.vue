@@ -84,7 +84,6 @@ export default {
   mounted(){
     this.getTableList()
   },
-
   methods: {
     getTableList() {
       const url = this.url
