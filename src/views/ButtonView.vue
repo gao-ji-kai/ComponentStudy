@@ -21,7 +21,7 @@
 // @ is an alias to /src
 
 export default {
-  name: 'HomeView',
+  name: 'ButtonView',
   components: {
     'a-button':()=>import("@/components/button/index.vue")
   },
