@@ -91,6 +91,10 @@ export default {
     //   default: true
     // },
   },
+  components: {
+    ...modules
+
+  },
   data() {
     return {
       tableData: [
@@ -121,10 +125,7 @@ export default {
     };
   },
 
-  components: {
-   ...modules
 
-  },
 
   computed: {},
 
