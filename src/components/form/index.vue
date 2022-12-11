@@ -4,7 +4,8 @@
     <template v-for="(item, index) in form_item">
       <el-form-item  :key="item.prop" :label="item.label" :prop="item.prop"
         :rules="item.rules">
-        <component :value.sync="field[item.prop]" :config="item"  :is="!item.type ? 'com-text' : `com-${item.type}`"/>
+        <slot v-if="item.type==='slot'" :name="item.slot_name"></slot>
+        <component v-else :value.sync="field[item.prop]" :config="item"  :is="!item.type ? 'com-text' : `com-${item.type}`"/>
       </el-form-item>
       <!-- <el-form-item v-if="item.type === 'select'" :key="item.prop" :label="item.label" :prop="item.prop">
         <el-select v-model="field[item.prop]"></el-select>
